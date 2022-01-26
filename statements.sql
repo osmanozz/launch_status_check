@@ -6,19 +6,21 @@ CREATE TABLE bloemen(
     bloem_code INT NOT NULL AUTO_INCREMENT,
     bloem_naam VARCHAR(255),
     bloem_img BLOB,
+    prijs_per_stuk DECIMAL(10,2),
+    aanwezig_toaal INT,
     PRIMARY KEY (bloem_code)
 );
 
 CREATE TABLE magazijnen(
     magazijn_code INT NOT NULL AUTO_INCREMENT,
     magazijn_naam VARCHAR(255) NOT NULL,
-    bloem_code INT,
-    PRIMARY KEY (magazijn_code),
+    PRIMARY KEY (magazijn_code)
 );
 
-CREATE TABLE voorraad(
+CREATE TABLE voorraad_bloemen(
     magazijn_code INT NOT NULL,
     bloem_code INT NOT NULL,
+    aantal int,
     FOREIGN KEY (magazijn_code) REFERENCES magazijnen(magazijn_code) ON DELETE CASCADE,
     FOREIGN KEY (bloem_code) REFERENCES bloemen(bloem_code) ON DELETE CASCADE
 );
@@ -30,3 +32,4 @@ CREATE TABLE medewerker(
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (medewerker_code)
 );
+
