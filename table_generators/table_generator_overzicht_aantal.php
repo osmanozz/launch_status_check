@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Overzicht magazijnen</title>
+        <title>Overzicht aantal bloemen</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <br><br>
-        <a href="bloem-toevoegen-voorraad.php" class="btn btn-primary">Bloemen toevoegen op Voorraad</a> <br><br>
-        <a href="overzicht-aantal-bloemen.php" class="btn btn-secondary">Overzicht aantal bloemen per magazijn</a> <br><br>
+        <a href="bloemen-voorraad.php" class="btn btn-primary">Terug</a> <br><br>
+     
         <?php
     
         function create_table($dataset, $from){
@@ -22,7 +22,7 @@
             ?>
 
             <table class="table table-striped">
-            <caption style="caption-side:top"><h2>Bloem Voorraad</h2></caption>
+            <caption style="caption-side:top"><h2>Aantal voorraad per bloem</h2></caption>
             
             <?php 
             // DE KOLOMNAMEN WORDEN OPGEHAALD
@@ -62,7 +62,8 @@
          }
     }?>
     </table>
-
+    <br>
+    <a class="btn btn-danger" href="login-medewerker.php">UITLOGGEN</a> <br><br>
     <br>
     
     </body>
