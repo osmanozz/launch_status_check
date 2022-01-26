@@ -8,7 +8,7 @@
             $bloem_naam = trim($_POST['bloem_naam']);
             $bloem_img = trim($_POST['bloem_img']);
             $prijs_per_stuk = trim($_POST['prijs_per_stuk']);
-            $aanwezig_toaal = trim($_POST['aanwezig_toaal']);
+            $aanwezig_totaal = trim($_POST['aanwezig_totaal']);
             
             
                 $sql = "UPDATE bloemen SET bloem_code=:bloem_code, bloem_naam=:bloem_naam, bloem_img=:bloem_img, prijs_per_stuk=:prijs_per_stuk, aanwezig_totaal=:aanwezig_totaal
@@ -19,7 +19,7 @@
                         'bloem_naam' => $bloem_naam,
                         'bloem_img' => $bloem_img,       
                         'prijs_per_stuk' => $prijs_per_stuk,
-                        'aanwezig_toaal' => $aanwezig_toaal,
+                        'aanwezig_totaal' => $aanwezig_totaal,
                                         
                     ];
                         $db->edit($sql,$placeholders, "overzicht-bloemen.php");

@@ -32,7 +32,7 @@ create_table($act, 'bloem');
         <h2 class="text-muted">Overzichten</h2>
 
                 <div class="section">
-                <a href="#" class="btn btn-primary">Aanwezig bloemen per magazijn</a> <br> <br>
+                <a href="overzicht-aantal-bloemen.php" class="btn btn-primary">Aanwezig bloemen per magazijn</a> <br> <br>
                 </div>
 
 
