@@ -1,7 +1,48 @@
 <?php
-
 require_once 'database.php';
 $db = new database();
+?>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <?php
+
+      $totaal_amsterdam = $db->select('SELECT SUM(voorraad_bloemen.aantal * bloemen.prijs_per_stuk) AS totaal_amsterdam FROM voorraad_bloemen 
+      INNER JOIN bloemen ON voorraad_bloemen.bloem_code = bloemen.bloem_code
+      WHERE magazijn_code = "4"');
+         foreach ($totaal_amsterdam as $productAms) {
+            foreach ($productAms as $das) {
+                        echo "<strong>AMSTERDAM totaal waarde = </strong>";
+                        echo "<strong>$das</strong>";
+                        echo "<br>";
+                    }
+        }
+    
+        ?>
+    </div>
+
+    <div class="w-100">
+    <div class="col">
+    <?php
+
+            $totaal_aalsmeer = $db->select('SELECT SUM(voorraad_bloemen.aantal * bloemen.prijs_per_stuk) AS totaal_aalsmeer FROM voorraad_bloemen 
+            INNER JOIN bloemen ON voorraad_bloemen.bloem_code = bloemen.bloem_code
+            WHERE magazijn_code = "5"');
+            foreach ($totaal_aalsmeer as $productAalsmeer) {
+                foreach ($productAalsmeer as $das) {
+                            echo "<strong>AALSMEER totaal waarde = </strong>";
+                            echo "<strong>$das</strong>";
+                            echo "<br>";
+                        }
+            }
+
+  ?>
+    </div>
+    
+
+<?php
 
 $act = $db->select("SELECT voorraad_bloemen.magazijn_code, magazijnen.magazijn_naam, voorraad_bloemen.bloem_code, bloemen.bloem_naam, bloemen.prijs_per_stuk, voorraad_bloemen.aantal
         FROM voorraad_bloemen 

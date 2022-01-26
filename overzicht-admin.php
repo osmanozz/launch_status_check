@@ -17,7 +17,7 @@
                 <a href="overzicht-bloemen.php" class="btn btn-primary">Bloemen toevoegen/wijzigen</a> <br> <br>
                 <a href="bloemen-voorraad.php" class="btn btn-primary">Bloemen Voorraad</a> <br> <br>
                 <a href="bloemen-aanwezig.php" class="btn btn-primary">Aanwezigheid bloemen</a> <br> <br>
-                <a href="medewerkers.php" class="btn btn-primary">Medewerkers</a> <br> <br>
+           
                 <br><br>
 
                 <a href="edit-wachtwoord.php" class="btn btn-primary">Wachtwoord wijzigen</a>
