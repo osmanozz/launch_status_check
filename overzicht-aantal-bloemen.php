@@ -8,13 +8,13 @@ $amsterdam = $db->select('SELECT bloemen.bloem_naam, voorraad_bloemen.aantal, ma
 from bloemen 
 INNER JOIN voorraad_bloemen ON bloemen.bloem_code = voorraad_bloemen.bloem_code
 INNER JOIN magazijnen ON magazijnen.magazijn_code = voorraad_bloemen.magazijn_code
-WHERE voorraad_bloemen.magazijn_code = "4"');
+WHERE magazijnen.magazijn_naam = "Rotterdam"');
 
 $aalsmeer = $db->select('SELECT bloemen.bloem_naam, voorraad_bloemen.aantal, magazijnen.magazijn_naam
 from bloemen 
 INNER JOIN voorraad_bloemen ON bloemen.bloem_code = voorraad_bloemen.bloem_code 
 INNER JOIN magazijnen on magazijnen.magazijn_code = voorraad_bloemen.magazijn_code
-WHERE voorraad_bloemen.magazijn_code = "5"');
+WHERE magazijnen.magazijn_naam = "Aalsmeer"');
 
 include 'table_generators/table_generator_overzicht_aantal.php';
 

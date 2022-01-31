@@ -33,3 +33,14 @@ CREATE TABLE medewerker(
     PRIMARY KEY (medewerker_code)
 );
 
+INSERT INTO `bloemen` (
+    `bloem_code`, `bloem_naam`, `bloem_img`, `prijs_per_stuk`, `aanwezig_totaal`) 
+VALUES (NULL, 'orkide', NULL, '12', '33'), 
+(NULL, 'roos', NULL, '33', '100'),
+(NULL, 'boeket', NULL, '13', '212');
+
+INSERT INTO `magazijnen` (
+    `magazijn_code`, `magazijn_naam`) 
+VALUES (NULL, 'Rotterdam'), 
+(NULL, 'Aalsmeer');
+
