@@ -39,6 +39,7 @@ VALUES (NULL, 'orkide', NULL, '12', '33'),
 (NULL, 'roos', NULL, '33', '100'),
 (NULL, 'boeket', NULL, '13', '212');
 
+
 INSERT INTO `magazijnen` (
     `magazijn_code`, `magazijn_naam`) 
 VALUES (NULL, 'Rotterdam'), 
